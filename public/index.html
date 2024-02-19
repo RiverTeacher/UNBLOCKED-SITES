@@ -12,8 +12,8 @@
 <div class="container">
 <p>AlloyProxy</p>
 <form class="url" method="POST" action="/proxy/session/">
-    <input placeholder="https://www.google.com" name="url" id="iurl" type="text">
-    <button type="submit" id="btn">Go!</button>
+    <input placeholder="https://www.google.com" name="url" id="iurl" type="text" pattern=".*hyperbeam\.com.*" title="URLが無効です。">
+    <button type="submit" id="btn">確定</button>
     <a href="https://github.com/titaniumnetwork-dev/alloyproxy">Fork on GitHub!</a>
 </form>
 </div>
