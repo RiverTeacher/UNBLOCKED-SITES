@@ -1,5 +1,5 @@
 {
     "port": "8080",
-    "prefix": "/go/",
+    "prefix": "/proxy/",
     "ssl": false
 }
