@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: lightgreen;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: gray;
+        }
+
+        .title {
+            font-family: Arial, sans-serif;
+            text-align: center;            
+            font-size: 50px;
+        }
+
+        .loading {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title">ユーザー認証</div>
+    <label for="idInput">IDを入力してください</label><br>
+
+    <input type="text" id="idInput">
+    <button onclick="startLoading()">認証</button>
+    <div id="loading" class="loading">
+        <p>ログイン処理中・・・</p>
+        <img src="load.gif" alt="loading" width="50px" height="50px">
+    </div>
+
+    <script>
+        function startLoading() {
+            // ロード演出を表示
+            document.getElementById("loading").style.display = "block";
+            // ロード演出後にリダイレクトを行う
+            setTimeout(redirect, 3500);
+        }
+
+        function redirect() {
+            // 入力されたIDを取得
+            var id = document.getElementById("idInput").value.trim();
+
+            // リダイレクト先URLの初期値
+            var redirectUrl = "https://chocolate-glen-flyaway.glitch.me/";
+
+            // IDによってリダイレクト先URLを設定
+            if (id === "001" || id === "002" || id === "003") {
+                redirectUrl = "https://chocolate-glen-flyaway.glitch.me/";
+            } else if (id === "004") {
+                redirectUrl = "https://gregrefea.onrender.com/ban.html";
+            } else {
+                alert("ご入力いただいたログインIDは存在しません。");
+                // ロード演出を非表示にする
+                document.getElementById("loading").style.display = "none";
+                return; // リダイレクトを行わずに処理を終了
+            }
+
+            // リダイレクト
+            window.location.href = redirectUrl;
+        }
+    </script>
+</body>
+</html>
