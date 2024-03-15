@@ -280,10 +280,6 @@
   res.send(proxy.sendResponse);
   });
 
-//404ページを出す
- app.use((req, res, next) => {
-  res.status(404).sendFile(__dirname + '/public/404.html');
-});
 	
   app.use('/', express.static('public'));
 
