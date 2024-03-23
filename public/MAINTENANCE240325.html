@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メンテナンス中</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* ページスクロールを無効にする */
+  }
+  #videoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  #videoBackground {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%); /* 動画を暗くする */
+  }
+  .title {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 3.5em;
+    color: red;
+    z-index: 1; /* テキストを動画の前に表示する */
+    animation: blink 0.5s infinite alternate; /* 点滅アニメーションを追加 */
+  }
+  .text {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+    color: white;
+    z-index: 1; /* テキストを動画の前に表示する */
+    white-space: nowrap; /* テキストの折り返しを無効にする */
+  }
+
+  #tapMessage {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1; /* メッセージを動画の前に表示する */
+  }
+  /* 点滅アニメーション */
+  @keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+</style>
+</head>
+<body oncontextmenu="return false;" onclick="startVideo()">
+
+  <div id="videoContainer">
+    <video id="videoBackground" muted loop>
+      <source src="dead.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="title">サーバー応答なし</div><br>
+  <div class="text">現在、APIサーバーに接続できません。<br>メンテナンスを行っている、またはダウンしている可能性があります。<br>
+    <font style="background-color: lightgreen;" color="red">server status<br>RENDER_MAINTENANCE <br>08:00～10:00 (Asia/Tokyo)</font><div></div></div>
+  <div id="tapMessage">音が出ます。タップして続行</div>
+
+  <script>
+    function startVideo() {
+      var tapMessage = document.getElementById("tapMessage");
+      var video = document.getElementById("videoBackground");
+
+      // メッセージを非表示にする
+      tapMessage.style.display = "none";
+
+      video.muted = false;
+      // ビデオを再生する
+      video.play();
+    }
+
+    // 現在の日時を取得
+    var currentDate = new Date();
+    var currentYear = currentDate.getFullYear();
+    var currentMonth = currentDate.getMonth() + 1; // 月は0から始まるので+1する
+    var currentDay = currentDate.getDate();
+    var currentHour = currentDate.getHours();
+    var currentMinute = currentDate.getMinutes();
+
+    // 指定の日付と時間帯にリダイレクト
+    if (currentYear === 2024 && currentMonth === 3 && currentDay === 25 && currentHour >= 8 && currentHour < 10) {
+      // 何もしない
+    } else {
+      window.location.href = "https://gregrefea.onrender.com";
+    }
+  </script>
+</body>
+</html>
