@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8"> 
-        <title></title>
-    </head>
-    <body>
-<pre id="myPre">llzllllltOtrrXwI(z&+++(((((((((((((((:;<<<dHkXkWffffpWWWppfpfffffVyVyyyVyy<```````````` jXWpbkHbbqmmmmmmqqqmHHHW@@@@M@@Hmg@@HgH@MHHHHHH@@@HqmgHHe.
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASCII Art Animation</title>
+<style>
+.ascii-art {
+    white-space: pre;
+    font-family: monospace;
+    font-size: 1.5em;
+    overflow: hidden;
+    animation: reveal 5s steps(40) infinite;
+}
+
+@keyframes reveal {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="ascii-art">
+    <!-- ここにアスキーアートのテキストを追加 -->
+    llzllllltOtrrXwI(z&+++(((((((((((((((:;<<<dHkXkWffffpWWWppfpfffffVyVyyyVyy<```````````` jXWpbkHbbqmmmmmmqqqmHHHW@@@@M@@Hmg@@HgH@MHHHHHH@@@HqmgHHe.
 ==========llOvvO_1z<>;;;;;;>>>>>>>?+11zzz?dqqkHHHqqkkkbbkbbpbbpppfffffVVVy>.```````````(XppkHpkkHHHkqHHkHqHHWHHggHH@HqqHHHHHg@@@HHHHHHMggg@@@@@@Hm- `
 z==?=llllzuwwwOr:(=?>;;;;;;>>>??>>>??????zdH@ggqqkkkkkkkkbbbbbkkkbbppppppfl..`````````.dppbHpkWHHkkbkWHgHbWWmgqH@@HHWpWHWWpHHHH@@@H@@HH@@@g@@@@@@HN<
 lllllllzXHHbbbWkl(zz+<;;:;;;>>>>>>>>??>>?zjW@ggmkqkqqkkkkbbbbkkkkkbbpbbpbWI....``````.jfpHfpWHHHkHWH@ggHWWHHgHgHHHpWWUX0uXWyZWWWWHM@@HHH@@@@@HH@H@@N_
@@ -62,22 +79,7 @@ gmg@H@HmH9XggMHHHM#HMHHMMMHmHHHHHHqkkkHpbkbpWXWHkqHXkXXZyWywdNeW#NNNNNNNMMSrvIWI
 @mg@MBSgHMMMNMH#HMMHHHmHgHqkWWWkbVWWyW9XUWWWWsWWWpWbWWHmkXW0OJMNsHMH9UZOOOjOzzxUvWJXZZZZuuuuuuuuuuuuuuuZZZZZZyyZyyyyyyyyyyyyyyyZZXXuVwXVXXzvZOOZXXHHWW
 Ws?XgMHMNMMMMWWHHHWmHWkWHH9XXXwZX0XXwkX0XXVXXwVXXUWWWHWWHHU0kwdMMROttllzz=+OzXun1o4nJ4ZZZZZZuuuuuZZuZuXXXyyyyyZyyyyyyyVyyyyyZyyyZZXZw>~???1zOCOOXWWWpy
 BQM###MUMHWHWgHWqkkdXSUXXVVvwwXZkuzVTOXwZXVwV0XZXwZuXyWHWWHXAzOHMMROl=ll==+wzGwuu&IJUkJ4yyyyZyZZyZZZZZZXyyyyyyyyyyyyyyyyyyyyyZyZZuuvZOIz-..  _.-dXWpV0
-MHHH##MHWggHHkWWWUwOuudXZwrvwwwVzwwXzwwwZZwXwwXwZZZZZyWXVWHHkwZkMNMkv=llltzzw<zwwuu&Ox4WkZZyyyyyyyyyyyyyyyyyyyyyyyVyyVyVyyyyyyZyZZuXwwOzz1zzsXXW6dfW0r</pre>
-
-<script>
-  const pre = document.getElementById('myPre');
-  const text = pre.textContent;
-
-  // 文字列を1文字ずつ分解
-  const chars = text.split('');
-
-  // 各文字を個別にDOMに追加
-  chars.forEach(char => {
-    const span = document.createElement('span');
-    span.textContent = char;
-    pre.appendChild(span);
-  });
-</script>
-
-    </body>
+MHHH##MHWggHHkWWWUwOuudXZwrvwwwVzwwXzwwwZZwXwwXwZZZZZyWXVWHHkwZkMNMkv=llltzzw<zwwuu&Ox4WkZZyyyyyyyyyyyyyyyyyyyyyyyVyyVyVyyyyyyZyZZuXwwOzz1zzsXXW6dfW0r
+</div>
+</body>
 </html>
