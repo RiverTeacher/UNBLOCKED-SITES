@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="__alloy_style.css" rel="stylesheet">
+    <style>
+        /* ボタンのスタイル */
+.buttonOutlineGradient {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 64px;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: 16px;
+  text-align: center;
+  overflow-wrap: anywhere;
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+}
+
+.buttonOutlineGradient::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(135deg, #6fa24a, #15a1cc);
+  filter: blur(8px);
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+  opacity: 0;
+}
+
+.buttonOutlineGradient_item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #222;
+  border-radius: 32px; /* (buttonの高さ / 2) の値 */
+}
+
+@media (any-hover: hover) {
+  .buttonOutlineGradient::before {
+    transition: opacity 0.2s;
+    will-change: filter;
+  }
+
+  .buttonOutlineGradient:hover::before {
+    opacity: 1;
+  }
+}
+    </style>
+        <style>
+        .iframe-container {
+            position: relative;
+            width: 50%;
+            height: 0;
+            padding-bottom: 20%; /* 画面の50%に設定 */
+            margin: 0 auto; /* 中央寄せ */
+            background-color: white; /* 背景を白に設定 */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body >
+<div class="container">
+<p>ログインポータル</p>
+<h4>当サービスは現在試験的な公開を行っています。安定した動作を保証するものではございませんのでバグっても文句言ってくんな</h4>
+<form class="url" method="POST" action="/proxy/session/">
+    <input placeholder="セッションリンクのURLをペーストしてください。" name="url" id="iurl" type="text" title="[エラーが発生しました]ご入力いただいたURLはサーバー内で発見できませんでした。">
+    <button type="submit" id="btn">確定</button>
+
+    
+</form>
+       
+          <br><br><br>
+    <a href="https://gregrefea.onrender.com/admin.html">管理者専用ページ</a><br>
+        <div class="iframe-container">
+        <iframe src="https://swanky-mixolydian-legume.glitch.me/"></iframe>
+    </div>
+</div>
+</div>
+<!--iframeを隠す-->
+<div style="opacity: 0;">
+        <iframe src="https://chocolate-glen-flyaway.glitch.me" width="10px" height="10px"></iframe>
+      </div>
+<!--shinobi1--><script type="text/javascript" src="//xa.shinobi.jp/ufo/191428100"></script><noscript><a href="//xa.shinobi.jp/bin/gg?191428100" target="_blank"><img src="//xa.shinobi.jp/bin/ll?191428100" border="0"></a><br><span style="font-size:9px"><img style="margin:0;vertical-align:text-bottom;" src="//img.shinobi.jp/tadaima/fj.gif" width="19" height="11"> </span></noscript><!--shinobi2-->
+
+
+
+    
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/648fdbe6cc26a871b02359a5/1h38v5vut';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+    
+<!-- admax -->
+<script src="https://adm.shinobi.jp/s/99e1f4ed38a04395ffbcc9a9a3e47b42"></script>
+<!-- admax -->
+
+ <!-- すまほ -->	
+<!-- admax -->
+<script src="https://adm.shinobi.jp/s/fe3f7da5a1eb6e871d615058515c9492"></script>
+<!-- admax --> 
+
+ <!-- admax -->
+<script src="https://adm.shinobi.jp/o/d6ee93d51817cd5420102ada02cfe061"></script>
+<!-- admax -->   
+</body>
+</html>
