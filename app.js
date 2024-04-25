@@ -30,6 +30,25 @@
   // WebSocket Proxying
   websocket(server);
 
+  //RPGサーバー系
+
+  // CORS設定
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', '*');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Expose-Headers', 'x-time');
+  next();
+});
+
+// "/bougenbot" パスへのGETリクエストを処理
+app.get('/simoyama-rpg', function(req, res) {
+  console.log('"/simoyama-rpg" へアクセスがありました。');
+  res.send('allow');
+});
+
+
   console.log(`The Proxy now running on ${server_protocol}0.0.0.0:${config.port}! Proxy prefix is "${config.prefix}"!`);
   server.listen(process.env.PORT || config.port);
 
